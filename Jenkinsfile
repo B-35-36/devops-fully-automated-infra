@@ -10,7 +10,7 @@ pipeline {
         stage('Git checkout') {
             steps {
                 echo 'Cloning project codebase...'
-                git branch: 'main', url: 'https://github.com/RudyTheGreat/devops-fully-automated-infra.git'
+                git branch: 'main', url: 'https://github.com/shaikhalitalatally/devops-fully-automated-infra.git'
                 sh 'ls'
             }
         }
@@ -79,7 +79,7 @@ pipeline {
          stage('Terraform apply') {
             steps {
                 echo 'Terraform apply...'
-                sh 'sudo terraform destroy --auto-approve'
+                sh 'sudo terraform apply --auto-approve'
                
                
             }
